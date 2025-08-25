@@ -32,12 +32,45 @@
 
     // --- 프리셋 테마 정의 ---
     const presets = {
-        sepia: { myBg: '#FBF8F1', myText: '#4C4B49', myItalic: '#A1887F', otherBg: '#F0EBE3', otherText: '#3D405B', otherItalic: '#8D99AE', codeHeaderBg: '#282A36', codeHeaderText: '#9CA3AF', codeBg: '#333644', codeText: '#E4E4E4' },
-        dark: { myBg: '#2E3440', myText: '#ECEFF4', myItalic: '#A3ABB2', otherBg: '#3B4252', otherText: '#ECEFF4', otherItalic: '#A3ABB2', codeHeaderBg: '#1E1E1E', codeHeaderText: '#888888', codeBg: '#252526', codeText: '#D4D4D4' },
-        dawn: { myBg: '#EAEAF3', myText: '#293241', myItalic: '#6D6875', otherBg: '#D8DEE9', otherText: '#343A40', otherItalic: '#6C757D', codeHeaderBg: '#011627', codeHeaderText: '#637777', codeBg: '#0D293F', codeText: '#D6DEEB' }
+        sandstone: { // 베이지-브라운 내추럴
+            myBg: '#F7F1E8',
+            myText: '#3D342B',
+            myItalic: '#8B7964',
+            otherBg: '#EEE3D3',
+            otherText: '#3D342B',
+            otherItalic: '#9C8972',
+            codeHeaderBg: '#2A211B',
+            codeHeaderText: '#9E8F80',
+            codeBg: '#332821',
+            codeText: '#EDE4DA'
+        },
+        sakura: { // 벚꽃 느낌
+            myBg: '#FFF7F9',
+            myText: '#3D2C2C',
+            myItalic: '#A6787C',
+            otherBg: '#FFEFF3',
+            otherText: '#4A3A3A',
+            otherItalic: '#B88A95',
+            codeHeaderBg: '#4B2E3D',
+            codeHeaderText: '#EFBBCF',
+            codeBg: '#5C3B47',
+            codeText: '#FCE7EF'
+        },
+        indigoDusk: { // 인디고 석양 라이트
+            myBg: '#ECEEFF',
+            myText: '#23243A',
+            myItalic: '#666A8B',
+            otherBg: '#E2E6FF',
+            otherText: '#242748',
+            otherItalic: '#6E7399',
+            codeHeaderBg: '#111230',
+            codeHeaderText: '#7D81B0',
+            codeBg: '#17183A',
+            codeText: '#D7D9F5'
+        }
     };
 
-    const defaultColors = presets.sepia;
+    const defaultColors = presets.sandstone;
 
     // --- 설정 관련 키 목록 ---
     const allSettingKeys = [
@@ -187,7 +220,7 @@
             <strong style="font-size: 16px;">🎨 말풍선 스킨 설정</strong>
             <button id="closeSkinPanel" style="border:none; background:transparent; font-size:16px; cursor:pointer; padding:0;">❌</button>
           </div>
-          <fieldset class="setting-group"><legend>프리셋 테마</legend><div style="display:flex; justify-content:space-around;"><button class="preset-btn" data-preset="sepia">세피아</button><button class="preset-btn" data-preset="dark">다크</button><button class="preset-btn" data-preset="dawn">새벽녘</button></div></fieldset>
+          <fieldset class="setting-group"><legend>프리셋 테마</legend><div style="display:flex; justify-content:space-around;"><button class="preset-btn" data-preset="sandstone">샌드스톤</button><button class="preset-btn" data-preset="sakura">사쿠라</button><button class="preset-btn" data-preset="indigoDusk">인디고</button></div></fieldset>
           <fieldset class="setting-group"><legend>커스텀 슬롯</legend>
             ${[1, 2, 3].map(i => `<div class="slot-row"><input type="text" class="slot-name-input" data-slot="${i}" placeholder="슬롯 ${i} 이름"><button class="slot-load" data-slot="${i}">불러오기</button><button class="slot-save" data-slot="${i}">저장</button></div>`).join('')}
           </fieldset>
